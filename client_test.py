@@ -4,14 +4,13 @@ import argparse
 import io
 from scipy.io import wavfile
 
-def send_tts_request(url, text, temperature=0.3, top_P=0.7, top_K=20, audio_seed_input=4099, text_seed_input=4099, refine_text_flag=True):
+def send_tts_request(url, text, temperature=0.3, top_P=0.7, top_K=20, audio_seed_input=4099, refine_text_flag=True):
     data = {
         "text": text,
         "temperature": temperature,
         "top_P": top_P,
         "top_K": top_K,
         "audio_seed_input": audio_seed_input,
-        "text_seed_input": text_seed_input,
         "refine_text_flag": refine_text_flag
     }
     print(f"Request data: {data}")
